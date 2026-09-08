@@ -12,12 +12,12 @@ SKIP_DIRS = {".git", ".venv", "venv", "build", "dist", "__pycache__", ".pytest_c
 BINARY_BLOCKLIST = {".pt", ".pth", ".ckpt", ".onnx", ".db", ".sqlite", ".sqlite3", ".pem", ".key", ".p12", ".pfx"}
 
 PATTERNS = {
-    "windows user path": re.compile(r"[A-Za-z]:[\\\\/]Users[\\\\/][^\\\\/\\s]+", re.I),
-    "unix home path": re.compile(r"/(?:home|Users)/[^/\\s]+", re.I),
-    "email address": re.compile(r"\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b", re.I),
-    "OpenAI-style secret": re.compile(r"\\bsk-[A-Za-z0-9_-]{20,}\\b"),
-    "Google-style API key": re.compile(r"\\bAIza[0-9A-Za-z_-]{20,}\\b"),
-    "GitHub token": re.compile(r"\\bgh[pousr]_[A-Za-z0-9_]{20,}\\b"),
+    "windows user path": re.compile(r"[A-Za-z]:[\\/]Users[\\/][^\\/\s]+", re.I),
+    "unix home path": re.compile(r"/(?:home|Users)/[^/\s]+", re.I),
+    "email address": re.compile(r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b", re.I),
+    "OpenAI-style secret": re.compile(r"\bsk-[A-Za-z0-9_-]{20,}\b"),
+    "Google-style API key": re.compile(r"\bAIza[0-9A-Za-z_-]{20,}\b"),
+    "GitHub token": re.compile(r"\bgh[pousr]_[A-Za-z0-9_]{20,}\b"),
     "private key header": re.compile(r"BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY"),
 }
 
