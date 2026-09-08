@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "satelladet"
+version = "0.2.1"
+description = "A lightweight anchor-free object detection framework with YOLO-format training and ONNX export."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+keywords = ["computer-vision", "object-detection", "pytorch", "onnx", "small-object-detection"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: Apache Software License",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "torch>=2.6",
+  "numpy>=1.24",
+  "Pillow>=10.0",
+  "PyYAML>=6.0",
+  "onnx>=1.16",
+  "onnxruntime>=1.19",
+  "onnxscript>=0.2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "build>=1.2",
+  "ruff>=0.8",
+]
+
+[project.scripts]
+satelladet-train = "satelladet.train:main"
+satelladet-check = "satelladet.check_dataset:main"
+satelladet-export = "satelladet.export_cli:main"
+satelladet-verify = "satelladet.verify_cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

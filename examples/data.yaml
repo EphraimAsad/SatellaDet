@@ -1,0 +1,7 @@
+# Replace /path/to/dataset before use.
+path: /path/to/dataset
+train: images/train
+val: images/val
+names:
+  0: class_a
+  1: class_b

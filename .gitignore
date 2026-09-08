@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Datasets / images / labels
+data/
+dataset/
+datasets/
+images/
+labels/
+
+# Models and checkpoints
+*.pt
+*.pth
+*.ckpt
+*.onnx
+runs/
+outputs/
+
+# Runtime logs and databases
+*.log
+*.db
+*.sqlite
+*.sqlite3
+metrics.csv
+class_metrics.csv
+best_class_metrics.json
+checkpoint_tracker.json
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
