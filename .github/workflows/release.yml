@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - "v*"
+    branches:
+      - "pypi-release-v0.2.1"
 
 jobs:
   build:
