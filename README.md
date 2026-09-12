@@ -41,7 +41,6 @@ Once published to PyPI, the intended installation command is:
 pip install satelladet
 ```
 
-> The `satelladet` project name should be re-checked on PyPI immediately before publication; package-name availability can change.
 
 ## Python API
 
@@ -167,8 +166,6 @@ This is intended to make model selection less dependent on a single aggregate me
 ## Privacy and datasets
 
 The public framework does not ship datasets, images, checkpoints, experiment logs, or trained weights. Runtime configuration and checkpoint metadata also avoid storing absolute local paths by default.
-
-Before publishing any separately trained model, independently review the training data rights, model metadata, and any logs bundled with it.
 
 See [PRIVACY.md](PRIVACY.md).
 
